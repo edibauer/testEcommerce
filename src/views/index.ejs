@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+    <% rows.forEach(row => { %>
+    <div class="card">
+        <div class="card__img">
+            <img src=<%= row.img %> alt="img1">
+        </div>
+        <div class="card__name">
+            <p><%= row.name %></p>
+        </div>
+        <div class="card__price">
+            <p><%= row.price %></p>
+        </div>
+
+        <form action="/cart" method="post">
+            <input type="hidden" name="id" value="<%= row.id %>">
+            <input type="hidden" name="name" value="<%= row.name %>">
+            <input type="hidden" name="price" value="<%= row.price %>">
+            <input type="hidden" name="quantity" value="1">
+            <input type="submit" value="Add to cart">
+        </form>
+        
+    </div>
+    <% }) %>
+
+</body>
+</html>

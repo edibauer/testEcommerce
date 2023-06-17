@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+
+    display: flex;
+}
+
+.card {
+    border: 1px solid black;
+}
+
+.card__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__img > img {
+    height: 18rem;
+}
+
+.card__name {
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__price {
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
